@@ -16,25 +16,45 @@
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/not-found.js"
     ],
-    "/[locale]/how-it-works/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/how-it-works/page.js"
-    ],
     "/[locale]/product/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/product/page.js"
+    ],
+    "/[locale]/about/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/about/page.js"
+    ],
+    "/[locale]/how-it-works/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/how-it-works/page.js"
     ],
     "/[locale]/contact/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/[locale]/contact/page.js"
     ],
-    "/[locale]/about/page": [
+    "/[locale]/product/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/[locale]/about/page.js"
+      "static/chunks/app/[locale]/product/layout.js"
+    ],
+    "/[locale]/about/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/about/layout.js"
+    ],
+    "/[locale]/how-it-works/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/how-it-works/layout.js"
+    ],
+    "/[locale]/contact/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/[locale]/contact/layout.js"
     ]
   }
 }

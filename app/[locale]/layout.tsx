@@ -27,13 +27,40 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tradetrustt.com';
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://trusttradellc.com'),
+  metadataBase: new URL(siteUrl),
   icons: {
     icon: '/favicon.png',
     shortcut: '/favicon.png',
     apple: '/favicon.png',
   },
+  openGraph: {
+    siteName: 'Trust Trade LLC',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@trusttradellc',
+  },
+};
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Trust Trade LLC',
+  url: siteUrl,
+  logo: `${siteUrl}/favicon.png`,
+  email: 'contact@trusttradellc.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressRegion: 'Florida',
+    addressCountry: 'US',
+  },
+  description: 'Direct methanol supplier. ASTM Grade AA, purity ≥99.85%. FOB & CIF worldwide delivery. Florida LLC.',
+  knowsAbout: ['Methanol Trading', 'Chemical Commodities', 'FOB CIF Logistics', 'ASTM Grade AA Methanol'],
 };
 
 export default async function LocaleLayout({
@@ -50,6 +77,12 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className="scroll-smooth">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+      </head>
       <body className={`${inter.variable} ${dmSans.variable} font-dmsans antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <Navbar />

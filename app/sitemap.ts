@@ -7,6 +7,22 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trusttradellc.com';
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
+  const priorities: Record<string, number> = {
+    '': 1.0,
+    '/product': 0.9,
+    '/contact': 0.9,
+    '/how-it-works': 0.8,
+    '/about': 0.7,
+  };
+
+  const frequencies: Record<string, 'weekly' | 'monthly'> = {
+    '': 'weekly',
+    '/product': 'monthly',
+    '/contact': 'monthly',
+    '/how-it-works': 'monthly',
+    '/about': 'monthly',
+  };
+
   for (const route of routes) {
     for (const locale of locales) {
       const url = locale === 'es'
@@ -16,8 +32,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         url,
         lastModified: new Date(),
-        changeFrequency: route === '' ? 'weekly' : 'monthly',
-        priority: route === '' ? 1 : 0.8,
+        changeFrequency: frequencies[route],
+        priority: priorities[route],
       });
     }
   }

@@ -1,24 +1,29 @@
 {
   "meta": {
     "home": {
-      "title": "Trust Trade LLC – Premium Methanol Trading",
-      "description": "Direct access to premium methanol supply. FOB & CIF. Global delivery. No intermediaries. Florida registered LLC."
+      "title": "Trust Trade LLC | Methanol Supplier – FOB & CIF Global Trading",
+      "description": "Direct methanol supplier. ASTM Grade AA, purity ≥99.85%. FOB & CIF worldwide delivery. Florida LLC. No intermediaries. Quote in 24-48h.",
+      "keywords": "methanol supplier, buy methanol, industrial methanol, methanol trading, methanol FOB CIF, ASTM grade AA methanol, methanol exporter, global methanol supply, methanol price quote, methanol distributor"
     },
     "product": {
-      "title": "Methanol CH₃OH – Technical Specifications | Trust Trade LLC",
-      "description": "ASTM Grade AA Methanol, minimum 99.85% purity. Available FOB & CIF. Request a quote today."
+      "title": "Industrial Methanol CH₃OH | ASTM Grade AA Supplier | Trust Trade LLC",
+      "description": "Buy industrial methanol ASTM Grade AA. Purity ≥99.85%. FOB & CIF. Global delivery. Competitive pricing. No intermediaries. Request a quote in 24-48h.",
+      "keywords": "buy methanol, industrial methanol, methanol CH3OH, ASTM grade AA methanol, methanol 99.85 purity, methanol FOB, methanol CIF, methanol specifications, methanol price, methanol bulk"
     },
     "about": {
-      "title": "About Us | Trust Trade LLC",
-      "description": "Meet the team behind Trust Trade LLC, a methanol trading company registered in Florida, USA."
+      "title": "About Trust Trade LLC | Methanol Trading Company | Florida USA",
+      "description": "Trust Trade LLC is a Florida-registered methanol trading company with direct supplier access and global reach. Transparent pricing, no intermediaries.",
+      "keywords": "Trust Trade LLC, methanol trading company, Florida methanol supplier, commodity trading Florida, methanol company USA, methanol exporter Florida"
     },
     "howItWorks": {
-      "title": "How It Works | Trust Trade LLC",
-      "description": "Simple 4-step process to source methanol. Response within 24-48 hours."
+      "title": "How to Buy Methanol | 4-Step Process | Trust Trade LLC",
+      "description": "Simple 4-step process to source industrial methanol. Submit RFQ, receive quote in 24-48h, sign contract, coordinate FOB or CIF delivery.",
+      "keywords": "how to buy methanol, methanol RFQ, methanol quote process, methanol procurement, methanol supply process, methanol purchase steps"
     },
     "contact": {
-      "title": "Contact & Request a Quote | Trust Trade LLC",
-      "description": "Request your methanol quote. We respond within 24-48 business hours."
+      "title": "Request Methanol Quote | Trust Trade LLC | 24-48h Response",
+      "description": "Request your methanol quote today. Fill out the RFQ form and receive a detailed offer within 24-48 business hours. FOB & CIF available.",
+      "keywords": "methanol quote request, RFQ methanol, methanol price inquiry, contact methanol supplier, buy methanol online, methanol quotation"
     }
   },
   "nav": {

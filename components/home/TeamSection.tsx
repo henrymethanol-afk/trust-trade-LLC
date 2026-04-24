@@ -6,9 +6,9 @@ import { Linkedin } from 'lucide-react';
 import ScrollAnimation from '@/components/ui/ScrollAnimation';
 
 const members = [
-  { name: 'Nicolas Herrera', initials: 'NH', photo: '/images/NicolasHerrera.jpg', linkedinHref: 'https://www.linkedin.com/in/nicolasjherrera/' },
-  { name: 'Henry Morales', initials: 'HM', photo: '/images/HenryMorales.jpg', linkedinHref: 'https://www.linkedin.com/in/henry-morales--/' },
-  { name: 'Yamil Llaver', initials: 'YL', photo: '/images/YamilLlaver.jpg', linkedinHref: 'https://www.linkedin.com/in/yamil-llaver/' },
+  { name: 'Nicolas Herrera', role: 'CRO', photo: '/images/NicolasHerrera.jpg', linkedinHref: 'https://www.linkedin.com/in/nicolasjherrera/' },
+  { name: 'Henry Morales', role: 'CEO & Founder', photo: '/images/HenryMorales.jpg', linkedinHref: 'https://www.linkedin.com/in/henry-morales--/' },
+  { name: 'Yamil Llaver', role: 'Head of Sales', photo: '/images/YamilLlaver.jpg', linkedinHref: 'https://www.linkedin.com/in/yamil-llaver/' },
 ];
 
 export default function TeamSection() {
@@ -44,7 +44,7 @@ export default function TeamSection() {
                 </div>
 
                 <h3 className="font-inter text-lg font-bold text-navy mb-1">{member.name}</h3>
-                <p className="text-gold text-sm font-medium mb-4">{t('role')}</p>
+                <p className="text-gold text-sm font-medium mb-4">{member.role}</p>
 
                 <a
                   href={member.linkedinHref}
