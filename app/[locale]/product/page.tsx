@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { CheckCircle, Download, Ship, Anchor, FlaskConical } from 'lucide-react';
+import { CheckCircle, Download, Ship, Anchor, FlaskConical, Waves } from 'lucide-react';
 import RFQForm from '@/components/RFQForm';
 import ScrollAnimation from '@/components/ui/ScrollAnimation';
 
@@ -118,9 +118,9 @@ export default function ProductPage() {
               {t('termsTitle')}
             </h2>
           </ScrollAnimation>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <ScrollAnimation delay={0.1}>
-              <div className="glass rounded-2xl p-8 border border-gold/20 hover:border-gold/40 transition-all group">
+              <div className="glass rounded-2xl p-8 border border-gold/20 hover:border-gold/40 transition-all group h-full">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
                     <Anchor className="w-7 h-7 text-gold" />
@@ -134,7 +134,7 @@ export default function ProductPage() {
               </div>
             </ScrollAnimation>
             <ScrollAnimation delay={0.2}>
-              <div className="glass rounded-2xl p-8 border border-gold/20 hover:border-gold/40 transition-all group">
+              <div className="glass rounded-2xl p-8 border border-gold/20 hover:border-gold/40 transition-all group h-full">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
                     <Ship className="w-7 h-7 text-gold" />
@@ -145,6 +145,24 @@ export default function ProductPage() {
                   </div>
                 </div>
                 <p className="text-white/70 leading-relaxed">{t('cifDesc')}</p>
+              </div>
+            </ScrollAnimation>
+            <ScrollAnimation delay={0.3}>
+              <div className="glass rounded-2xl p-8 border border-gold/20 hover:border-gold/40 transition-all group h-full">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
+                    <Waves className="w-7 h-7 text-gold" />
+                  </div>
+                  <div>
+                    <h3 className="font-inter text-2xl font-bold text-gold">{t('tankerTitle')}</h3>
+                    <span className="text-white/50 text-sm">Full Charter</span>
+                  </div>
+                </div>
+                <p className="text-white/70 leading-relaxed">{t('tankerDesc')}</p>
+                <div className="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold/10 border border-gold/20">
+                  <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+                  <span className="text-gold text-xs font-medium">{t('tankerNote')}</span>
+                </div>
               </div>
             </ScrollAnimation>
           </div>

@@ -42,7 +42,7 @@
   },
   "trustBar": {
     "globalDelivery": "Global Delivery",
-    "fobCif": "FOB & CIF Available",
+    "fobCif": "FOB · CIF · Tanker",
     "response": "24-48h Response",
     "registered": "US Registered LLC"
   },
@@ -164,6 +164,9 @@
     "fobDesc": "Free On Board – The cargo is placed on board the vessel at the origin port.",
     "cifTitle": "CIF",
     "cifDesc": "Cost, Insurance & Freight – Price includes transport and insurance to the destination port.",
+    "tankerTitle": "Chemical Tanker",
+    "tankerDesc": "Full charter of chemical tankers for large-volume shipments. For clients without their own vessel, we coordinate the complete maritime logistics. Pricing available upon inquiry.",
+    "tankerNote": "Pricing on request",
     "applicationsTitle": "Main Applications",
     "applications": [
       "Formaldehyde Production",
@@ -320,7 +323,8 @@
     "deliveryOptions": {
       "fob": "FOB",
       "cif": "CIF",
-      "both": "Both (FOB & CIF)"
+      "both": "Both (FOB & CIF)",
+      "tanker": "Chemical Tanker (on request)"
     },
     "submit": "Send Request",
     "submitting": "Sending...",

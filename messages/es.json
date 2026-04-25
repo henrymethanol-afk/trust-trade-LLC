@@ -42,7 +42,7 @@
   },
   "trustBar": {
     "globalDelivery": "Entrega Global",
-    "fobCif": "FOB & CIF Disponible",
+    "fobCif": "FOB · CIF · Tanque",
     "response": "Respuesta 24-48h",
     "registered": "LLC Registrada en EE.UU."
   },
@@ -164,6 +164,9 @@
     "fobDesc": "Free On Board – El cargamento es puesto a bordo del buque en el puerto de origen.",
     "cifTitle": "CIF",
     "cifDesc": "Cost, Insurance & Freight – Precio incluye transporte y seguro hasta el puerto de destino.",
+    "tankerTitle": "Tanque Químico",
+    "tankerDesc": "Fletamento completo de buques tanque químicos para embarques de gran volumen. Ideal para clientes que no cuentan con embarcación propia. Precios y disponibilidad a consultar.",
+    "tankerNote": "Precio a consultar",
     "applicationsTitle": "Aplicaciones Principales",
     "applications": [
       "Producción de Formaldehído",
@@ -320,7 +323,8 @@
     "deliveryOptions": {
       "fob": "FOB",
       "cif": "CIF",
-      "both": "Ambos (FOB y CIF)"
+      "both": "Ambos (FOB y CIF)",
+      "tanker": "Tanque Químico (a consultar)"
     },
     "submit": "Enviar Solicitud",
     "submitting": "Enviando...",

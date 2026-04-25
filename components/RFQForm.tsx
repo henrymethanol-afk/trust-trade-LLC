@@ -15,27 +15,12 @@ const formSchema = z.object({
   phone: z.string().optional(),
   product: z.string().default('Methanol (CH₃OH)'),
   volume: z.string().optional(),
-  deliveryTerms: z.enum(['FOB', 'CIF', 'Both']),
+  deliveryTerms: z.enum(['FOB', 'CIF', 'Both', 'Tanker']),
   message: z.string().optional(),
 });
 
 type FormData = z.infer<typeof formSchema>;
 
-interface InputProps {
-  label: string;
-  error?: string;
-  children: React.ReactNode;
-}
-
-function Field({ label, error, children }: InputProps) {
-  return (
-    <div>
-      <label className="block text-sm font-medium text-white/70 mb-1.5">{label}</label>
-      {children}
-      {error && <p className="mt-1 text-red-400 text-xs">{error}</p>}
-    </div>
-  );
-}
 
 const inputClass =
   'w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white text-sm placeholder:text-white/30 focus:outline-none focus:border-gold/50 focus:bg-white/8 transition-all';
@@ -168,6 +153,7 @@ export default function RFQForm({ dark = false }: { dark?: boolean }) {
             <option value="FOB">{t('deliveryOptions.fob')}</option>
             <option value="CIF">{t('deliveryOptions.cif')}</option>
             <option value="Both">{t('deliveryOptions.both')}</option>
+            <option value="Tanker">{t('deliveryOptions.tanker')}</option>
           </select>
         </div>
       </div>
