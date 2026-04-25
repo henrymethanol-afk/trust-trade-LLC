@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import HeroSection from '@/components/home/HeroSection';
 import TrustBar from '@/components/home/TrustBar';
+import MarketIntelligence from '@/components/home/MarketIntelligence';
 import ValueProposition from '@/components/home/ValueProposition';
 import ProductPreview from '@/components/home/ProductPreview';
 import HowItWorksPreview from '@/components/home/HowItWorksPreview';
@@ -46,6 +47,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <TrustBar />
+      <MarketIntelligence />
       <ValueProposition />
       <ProductPreview />
       <HowItWorksPreview />
