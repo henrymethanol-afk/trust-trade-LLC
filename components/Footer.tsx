@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { Mail, MessageCircle, Linkedin } from 'lucide-react';
 
@@ -19,9 +20,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href={getHref('/')} className="inline-flex items-center gap-2 mb-5">
-              <div className="w-7 h-7 rounded-md bg-gold flex items-center justify-center flex-shrink-0">
-                <span className="text-navy font-inter font-black text-sm">T</span>
+            <Link href={getHref('/')} className="inline-flex items-center gap-2.5 mb-5">
+              <div className="w-9 h-9 rounded-lg bg-white flex items-center justify-center flex-shrink-0 p-1">
+                <Image
+                  src="/images/logo-icon.png"
+                  alt="Trust Trade LLC"
+                  width={36}
+                  height={36}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="font-inter font-bold text-white text-lg tracking-tight">
                 Trust Trade <span className="text-gold">LLC</span>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -61,9 +62,16 @@ export default function Navbar() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href={getHref('/')} className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-md bg-gold flex items-center justify-center flex-shrink-0">
-              <span className="text-navy font-inter font-black text-sm">T</span>
+          <Link href={getHref('/')} className="flex items-center gap-2.5">
+            <div className="w-9 h-9 rounded-lg bg-white flex items-center justify-center flex-shrink-0 p-1">
+              <Image
+                src="/images/logo-icon.png"
+                alt="Trust Trade LLC"
+                width={36}
+                height={36}
+                className="w-full h-full object-contain"
+                priority
+              />
             </div>
             <span className="font-inter font-bold text-white text-lg tracking-tight">
               Trust Trade <span className="text-gold">LLC</span>
