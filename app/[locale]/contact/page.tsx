@@ -98,7 +98,9 @@ export default function ContactPage() {
               {/* LinkedIn */}
               <ScrollAnimation delay={0.4}>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/trust-trade-llc/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-4 bg-white rounded-xl p-5 border border-gray-100 hover:border-gold/30 hover:shadow-md transition-all group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-navy flex items-center justify-center group-hover:bg-gold/10 transition-colors flex-shrink-0">

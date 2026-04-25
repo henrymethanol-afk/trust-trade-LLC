@@ -94,7 +94,9 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/trust-trade-llc/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-white/50 hover:text-gold text-sm transition-colors"
                 >
                   <Linkedin className="w-4 h-4" />
