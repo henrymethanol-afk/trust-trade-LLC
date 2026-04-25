@@ -109,15 +109,15 @@ export async function POST(req: NextRequest) {
     `;
 
     await resend.emails.send({
-      from: 'TrustBot <noreply@trusttradellc.com>',
-      to: ['contact@trusttradellc.com'],
+      from: 'Trust Trade LLC <onboarding@resend.dev>',
+      to: ['yamilllaver25@gmail.com'],
       reply_to: email,
       subject: `New RFQ from ${fullName} — ${company} (${country})`,
       html: htmlContent,
     });
 
     await resend.emails.send({
-      from: 'Trust Trade LLC <noreply@trusttradellc.com>',
+      from: 'Trust Trade LLC <onboarding@resend.dev>',
       to: [email],
       subject: 'We received your quote request | Trust Trade LLC',
       html: `
