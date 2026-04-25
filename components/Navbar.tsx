@@ -41,6 +41,7 @@ export default function Navbar() {
   const navLinks = [
     { href: getHref('/'), label: t('home') },
     { href: getHref('/product'), label: t('product') },
+    { href: getHref('/solutions'), label: t('solutions') },
     { href: getHref('/about'), label: t('about') },
     { href: getHref('/how-it-works'), label: t('howItWorks') },
     { href: getHref('/contact'), label: t('contact') },
