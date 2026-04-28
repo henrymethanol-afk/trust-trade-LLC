@@ -7,6 +7,7 @@ import {
   MessageSquare, FileText, Pen, Truck, CheckCircle, ChevronDown,
 } from 'lucide-react';
 import ScrollAnimation from '@/components/ui/ScrollAnimation';
+import SectionParticles from '@/components/ui/SectionParticles';
 
 const stepIcons = [MessageSquare, FileText, Pen, Truck];
 
@@ -103,8 +104,9 @@ export default function HowItWorksPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-navy section-padding">
-        <div className="max-w-4xl mx-auto">
+      <section className="bg-navy section-padding relative overflow-hidden">
+        <SectionParticles id="particles-hiw" />
+        <div className="relative z-10 max-w-4xl mx-auto">
           <ScrollAnimation>
             <div className="text-center mb-12">
               <span className="inline-block px-4 py-1.5 rounded-full border border-gold/30 text-gold text-sm font-medium mb-4 bg-gold/10">

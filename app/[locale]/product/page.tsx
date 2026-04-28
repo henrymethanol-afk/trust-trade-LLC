@@ -224,15 +224,15 @@ export default function ProductPage() {
                 <motion.div
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.2 }}
-                  className="relative rounded-2xl overflow-hidden group"
+                  className={`relative rounded-2xl overflow-hidden group bg-gradient-to-t ${c.accent} to-navy`}
                   style={{ aspectRatio: '4/3' }}
                 >
                   <div
                     className="absolute inset-0 bg-center bg-cover transition-transform duration-700 group-hover:scale-110"
                     style={{ backgroundImage: `url('${c.image}')` }}
                   />
-                  <div className={`absolute inset-0 bg-gradient-to-t ${c.accent} to-navy`} />
-                  <div className="absolute inset-0 bg-navy/55 group-hover:bg-navy/40 transition-colors duration-500" />
+                  <div className="absolute inset-0 bg-navy/35 group-hover:bg-navy/20 transition-colors duration-500" />
+                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-gold/40 transition-colors duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-4">
                     <p className="font-inter font-bold text-white text-sm md:text-base leading-tight mb-1.5 group-hover:-translate-y-0.5 transition-transform duration-300">

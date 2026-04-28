@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Target, Link2, ShieldCheck, Users, Globe2, CheckCircle } from 'lucide-react';
 import ScrollAnimation from '@/components/ui/ScrollAnimation';
 import TeamSection from '@/components/home/TeamSection';
+import SectionParticles from '@/components/ui/SectionParticles';
 
 const whyIcons = [Link2, ShieldCheck, Users];
 
@@ -104,8 +105,9 @@ export default function AboutPage() {
       </section>
 
       {/* Florida LLC Badge */}
-      <section className="bg-navy section-padding">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="bg-navy section-padding relative overflow-hidden">
+        <SectionParticles id="particles-about-1" />
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <ScrollAnimation>
             <div className="glass rounded-2xl p-10 border border-gold/20 inline-block w-full">
               <div className="flex flex-col items-center gap-6">
@@ -140,8 +142,9 @@ export default function AboutPage() {
       <TeamSection />
 
       {/* Global Reach */}
-      <section className="bg-navy section-padding">
-        <div className="max-w-6xl mx-auto">
+      <section className="bg-navy section-padding relative overflow-hidden">
+        <SectionParticles id="particles-about-2" />
+        <div className="relative z-10 max-w-6xl mx-auto">
           <ScrollAnimation>
             <div className="text-center mb-12">
               <span className="inline-block px-4 py-1.5 rounded-full border border-gold/30 text-gold text-sm font-medium mb-4 bg-gold/10">

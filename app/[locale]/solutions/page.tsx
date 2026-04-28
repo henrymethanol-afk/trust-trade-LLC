@@ -9,6 +9,7 @@ import {
   Gauge, Radio, TrendingUp, Zap, Globe2, Award,
 } from 'lucide-react';
 import ScrollAnimation from '@/components/ui/ScrollAnimation';
+import SectionParticles from '@/components/ui/SectionParticles';
 
 /* ─── Lenntech ─── */
 const lenntechCategories = [
@@ -270,8 +271,9 @@ export default function SolutionsPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-navy section-padding">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="bg-navy section-padding relative overflow-hidden">
+        <SectionParticles id="particles-solutions" />
+        <div className="relative z-10 max-w-4xl mx-auto text-center">
           <ScrollAnimation>
             <Globe2 className="w-10 h-10 text-gold/40 mx-auto mb-5" />
             <h2 className="font-inter text-3xl md:text-4xl font-bold text-white mb-4">

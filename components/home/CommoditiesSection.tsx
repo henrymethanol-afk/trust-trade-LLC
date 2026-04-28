@@ -82,16 +82,14 @@ export default function CommoditiesSection() {
 
         {/* ── Featured: Methanol ── */}
         <ScrollAnimation>
-          <div className="relative rounded-3xl overflow-hidden mb-4 group">
-            {/* Background image */}
+          {/* bg-gradient is fallback — image sits on top via absolute positioning */}
+          <div className="relative rounded-3xl overflow-hidden mb-4 group bg-gradient-to-br from-navy to-navy-dark">
             <div
               className="absolute inset-0 bg-center bg-cover transition-transform duration-700 group-hover:scale-105"
               style={{ backgroundImage: `url('${featured.image}')` }}
             />
-            {/* Fallback gradient (shows if image is missing) */}
-            <div className="absolute inset-0 bg-gradient-to-br from-navy to-navy-dark" />
             {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-navy/90 via-navy/70 to-navy/30" />
+            <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/55 to-navy/20" />
 
             <div className="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 p-8 md:p-12">
               <div>
@@ -136,18 +134,17 @@ export default function CommoditiesSection() {
               <motion.div
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.2 }}
-                className="relative rounded-2xl overflow-hidden cursor-default group"
+                className={`relative rounded-2xl overflow-hidden cursor-default group bg-gradient-to-t ${c.accent} to-navy`}
                 style={{ aspectRatio: '4/3' }}
               >
-                {/* Background image */}
                 <div
                   className="absolute inset-0 bg-center bg-cover transition-transform duration-700 group-hover:scale-110"
                   style={{ backgroundImage: `url('${c.image}')` }}
                 />
-                {/* Fallback gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-t ${c.accent} to-navy`} />
                 {/* Overlay — lighter on hover */}
-                <div className="absolute inset-0 bg-navy/55 group-hover:bg-navy/40 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-navy/35 group-hover:bg-navy/20 transition-colors duration-500" />
+                {/* Bottom fade for text legibility */}
+                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/60 to-transparent" />
                 {/* Gold border on hover */}
                 <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-gold/40 transition-colors duration-300" />
 
