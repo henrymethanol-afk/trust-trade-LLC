@@ -14,44 +14,44 @@ const featured = {
   name: 'Methanol',
   formula: 'CH₃OH',
   specs: ['ASTM Grade AA', 'Purity ≥99.85%', 'FOB · CIF · Tanker'],
-  image: '/images/commodities/methanol.jpg', // search: "methanol chemical plant"
+  image: '/images/commodities/methanol.jpeg', // search: "methanol chemical plant"
 };
 
 const commodities = [
   {
     name: 'Diesel / ULSD',
     tag: 'Ultra Low Sulfur Diesel',
-    image: '/images/commodities/diesel.jpg',       // search: "fuel truck diesel"
+    image: '/images/commodities/diesel.jpeg',       // search: "fuel truck diesel"
     accent: 'from-amber-900/80',
   },
   {
     name: 'Fuel Oil',
     tag: 'Industrial & Heating',
-    image: '/images/commodities/fuel-oil.jpg',     // search: "oil refinery storage tanks"
+    image: '/images/commodities/fuel-oil.jpeg',     // search: "oil refinery storage tanks"
     accent: 'from-stone-900/80',
   },
   {
     name: 'Marine Fuel',
     tag: 'Bunker & VLSFO',
-    image: '/images/commodities/marine-fuel.jpg',  // search: "cargo ship port bunker"
+    image: '/images/commodities/marine-fuel.jpeg',  // search: "cargo ship port bunker"
     accent: 'from-blue-950/80',
   },
   {
     name: 'Jet Fuel / Jet A-1',
     tag: 'Aviation Grade',
-    image: '/images/commodities/jet-fuel.jpg',     // search: "airplane refuel aviation"
+    image: '/images/commodities/jet-fuel.jpeg',     // search: "airplane refuel aviation"
     accent: 'from-sky-900/80',
   },
   {
     name: 'Asphalt / Bitumen',
     tag: 'Road & Industrial',
-    image: '/images/commodities/asphalt.jpg',      // search: "asphalt road construction bitumen"
+    image: '/images/commodities/asphalts.jpeg',      // search: "asphalt road construction bitumen"
     accent: 'from-neutral-900/80',
   },
   {
     name: 'Lubricants',
     tag: 'Industrial Grade',
-    image: '/images/commodities/lubricants.jpg',   // search: "industrial machinery lubricant oil"
+    image: '/images/commodities/lubricants.jpeg',   // search: "industrial machinery lubricant oil"
     accent: 'from-zinc-800/80',
   },
 ];

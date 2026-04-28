@@ -8,12 +8,12 @@ import RFQForm from '@/components/RFQForm';
 import ScrollAnimation from '@/components/ui/ScrollAnimation';
 
 const otherCommodities = [
-  { name: 'Diesel / ULSD',      tag: 'Ultra Low Sulfur',   image: '/images/commodities/diesel.jpg',      accent: 'from-amber-900/80' },
-  { name: 'Fuel Oil',           tag: 'Industrial & Heating', image: '/images/commodities/fuel-oil.jpg',   accent: 'from-stone-900/80' },
-  { name: 'Marine Fuel',        tag: 'Bunker & VLSFO',     image: '/images/commodities/marine-fuel.jpg', accent: 'from-blue-950/80'  },
-  { name: 'Jet Fuel / Jet A-1', tag: 'Aviation Grade',     image: '/images/commodities/jet-fuel.jpg',    accent: 'from-sky-900/80'   },
-  { name: 'Asphalt / Bitumen',  tag: 'Road & Industrial',  image: '/images/commodities/asphalt.jpg',     accent: 'from-neutral-900/80' },
-  { name: 'Lubricants',         tag: 'Industrial Grade',   image: '/images/commodities/lubricants.jpg',  accent: 'from-zinc-800/80'  },
+  { name: 'Diesel / ULSD',      tag: 'Ultra Low Sulfur',   image: '/images/commodities/diesel.jpeg',      accent: 'from-amber-900/80' },
+  { name: 'Fuel Oil',           tag: 'Industrial & Heating', image: '/images/commodities/fuel-oil.jpeg',   accent: 'from-stone-900/80' },
+  { name: 'Marine Fuel',        tag: 'Bunker & VLSFO',     image: '/images/commodities/marine-fuel.jpeg', accent: 'from-blue-950/80'  },
+  { name: 'Jet Fuel / Jet A-1', tag: 'Aviation Grade',     image: '/images/commodities/jet-fuel.jpeg',    accent: 'from-sky-900/80'   },
+  { name: 'Asphalt / Bitumen',  tag: 'Road & Industrial',  image: '/images/commodities/asphalts.jpeg',     accent: 'from-neutral-900/80' },
+  { name: 'Lubricants',         tag: 'Industrial Grade',   image: '/images/commodities/lubricants.jpeg',  accent: 'from-zinc-800/80'  },
 ];
 
 export default function ProductPage() {

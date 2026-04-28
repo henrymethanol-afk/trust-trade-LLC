@@ -13,7 +13,16 @@ const formSchema = z.object({
   country: z.string().min(1),
   email: z.string().email(),
   phone: z.string().optional(),
-  product: z.string().default('Methanol (CH₃OH)'),
+  product: z.enum([
+    'Methanol (CH₃OH)',
+    'Diesel / ULSD',
+    'Fuel Oil',
+    'Marine Fuel',
+    'Jet Fuel / Jet A-1',
+    'Asphalt / Bitumen',
+    'Lubricants',
+    'Other',
+  ]).default('Methanol (CH₃OH)'),
   volume: z.string().optional(),
   deliveryTerms: z.enum(['FOB', 'CIF', 'Both', 'Tanker']),
   message: z.string().optional(),
@@ -127,12 +136,16 @@ export default function RFQForm({ dark = false }: { dark?: boolean }) {
         {/* Product */}
         <div>
           <label className={labelClass}>{t('fields.product')}</label>
-          <input
-            {...register('product')}
-            type="text"
-            className={ic}
-            readOnly
-          />
+          <select {...register('product')} className={ic}>
+            <option value="Methanol (CH₃OH)">Methanol (CH₃OH) — Core Product</option>
+            <option value="Diesel / ULSD">Diesel / ULSD</option>
+            <option value="Fuel Oil">Fuel Oil</option>
+            <option value="Marine Fuel">Marine Fuel</option>
+            <option value="Jet Fuel / Jet A-1">Jet Fuel / Jet A-1</option>
+            <option value="Asphalt / Bitumen">Asphalt / Bitumen</option>
+            <option value="Lubricants">Lubricants</option>
+            <option value="Other">Other (specify in message)</option>
+          </select>
         </div>
 
         {/* Volume */}

@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { FlaskConical, Zap, BarChart3, Factory, Wrench } from 'lucide-react';
 import ScrollAnimation from '@/components/ui/ScrollAnimation';
+import SectionParticles from '@/components/ui/SectionParticles';
 
 const icons = [FlaskConical, Zap, BarChart3, Factory, Wrench];
 
@@ -11,8 +12,9 @@ export default function IndustriesSection() {
   const items = t.raw('items') as Array<{ title: string; description: string }>;
 
   return (
-    <section className="bg-navy section-padding">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-navy section-padding relative overflow-hidden">
+      <SectionParticles id="particles-industries" />
+      <div className="relative z-10 max-w-7xl mx-auto">
         <ScrollAnimation>
           <div className="text-center mb-14">
             <span className="inline-block px-4 py-1.5 rounded-full border border-gold/30 text-gold text-sm font-medium mb-4 bg-gold/10">

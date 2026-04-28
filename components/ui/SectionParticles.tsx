@@ -7,7 +7,15 @@ import type { ISourceOptions } from '@tsparticles/engine';
 
 const options: ISourceOptions = {
   background: { color: { value: 'transparent' } },
-  fpsLimit: 50,
+  fpsLimit: 60,
+  interactivity: {
+    events: {
+      onHover: { enable: true, mode: 'repulse' },
+    },
+    modes: {
+      repulse: { distance: 80, duration: 0.4 },
+    },
+  },
   particles: {
     color: { value: '#C9A84C' },
     links: {
