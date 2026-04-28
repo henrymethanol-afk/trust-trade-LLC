@@ -1,13 +1,24 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
-import { CheckCircle, Download, Ship, Anchor, FlaskConical, Waves } from 'lucide-react';
+import { CheckCircle, Download, Ship, Anchor, FlaskConical, Waves, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import RFQForm from '@/components/RFQForm';
 import ScrollAnimation from '@/components/ui/ScrollAnimation';
 
+const otherCommodities = [
+  { name: 'Diesel / ULSD',      tag: 'Ultra Low Sulfur',   image: '/images/commodities/diesel.jpg',      accent: 'from-amber-900/80' },
+  { name: 'Fuel Oil',           tag: 'Industrial & Heating', image: '/images/commodities/fuel-oil.jpg',   accent: 'from-stone-900/80' },
+  { name: 'Marine Fuel',        tag: 'Bunker & VLSFO',     image: '/images/commodities/marine-fuel.jpg', accent: 'from-blue-950/80'  },
+  { name: 'Jet Fuel / Jet A-1', tag: 'Aviation Grade',     image: '/images/commodities/jet-fuel.jpg',    accent: 'from-sky-900/80'   },
+  { name: 'Asphalt / Bitumen',  tag: 'Road & Industrial',  image: '/images/commodities/asphalt.jpg',     accent: 'from-neutral-900/80' },
+  { name: 'Lubricants',         tag: 'Industrial Grade',   image: '/images/commodities/lubricants.jpg',  accent: 'from-zinc-800/80'  },
+];
+
 export default function ProductPage() {
   const t = useTranslations('product');
+  const locale = useLocale();
 
   const specs = [
     { key: 'purity', value: t('values.purity') },
@@ -184,6 +195,62 @@ export default function ProductPage() {
                   <CheckCircle className="w-5 h-5 text-gold flex-shrink-0" />
                   <span className="font-medium text-navy">{app}</span>
                 </div>
+              </ScrollAnimation>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Commodities */}
+      <section className="bg-navy section-padding">
+        <div className="max-w-6xl mx-auto">
+          <ScrollAnimation>
+            <div className="text-center mb-10">
+              <span className="inline-block px-4 py-1.5 rounded-full border border-gold/30 text-gold text-sm font-medium mb-5 bg-gold/10">
+                Full Trading Portfolio
+              </span>
+              <h2 className="font-inter text-3xl md:text-4xl font-bold text-white mb-3">
+                Our Commodities
+              </h2>
+              <p className="text-white/50 text-lg max-w-2xl mx-auto">
+                Beyond methanol, we source and trade across the full energy spectrum — refined fuels, petrochemicals and more.
+              </p>
+            </div>
+          </ScrollAnimation>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {otherCommodities.map((c, i) => (
+              <ScrollAnimation key={c.name} delay={i * 0.07}>
+                <motion.div
+                  whileHover={{ y: -4 }}
+                  transition={{ duration: 0.2 }}
+                  className="relative rounded-2xl overflow-hidden group"
+                  style={{ aspectRatio: '4/3' }}
+                >
+                  <div
+                    className="absolute inset-0 bg-center bg-cover transition-transform duration-700 group-hover:scale-110"
+                    style={{ backgroundImage: `url('${c.image}')` }}
+                  />
+                  <div className={`absolute inset-0 bg-gradient-to-t ${c.accent} to-navy`} />
+                  <div className="absolute inset-0 bg-navy/55 group-hover:bg-navy/40 transition-colors duration-500" />
+                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-gold/40 transition-colors duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <p className="font-inter font-bold text-white text-sm md:text-base leading-tight mb-1.5 group-hover:-translate-y-0.5 transition-transform duration-300">
+                      {c.name}
+                    </p>
+                    <span className="inline-block px-2.5 py-0.5 rounded-full bg-gold/20 border border-gold/30 text-gold text-xs font-medium">
+                      {c.tag}
+                    </span>
+                  </div>
+                  <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <Link
+                      href={locale === 'es' ? '/contact' : `/${locale}/contact`}
+                      className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gold text-navy text-xs font-bold shadow-lg"
+                    >
+                      Inquire <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </div>
+                </motion.div>
               </ScrollAnimation>
             ))}
           </div>

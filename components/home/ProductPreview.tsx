@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import { ArrowRight, FlaskConical, CheckCircle } from 'lucide-react';
 import ScrollAnimation from '@/components/ui/ScrollAnimation';
+import SectionParticles from '@/components/ui/SectionParticles';
 
 export default function ProductPreview() {
   const t = useTranslations('productPreview');
@@ -12,8 +13,9 @@ export default function ProductPreview() {
   const getHref = (path: string) => locale === 'es' ? path : `/${locale}${path}`;
 
   return (
-    <section className="bg-navy section-padding">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-navy section-padding relative overflow-hidden">
+      <SectionParticles id="particles-product" />
+      <div className="relative z-10 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: content */}
           <ScrollAnimation>

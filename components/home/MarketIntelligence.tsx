@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useInView, animate } from 'framer-motion';
 import { Brain, Radio, TrendingUp, Zap, Globe2, ShieldCheck, Clock, BarChart3 } from 'lucide-react';
+import SectionParticles from '@/components/ui/SectionParticles';
 
 const chartPoints = [42, 38, 55, 48, 62, 58, 70, 65, 78, 72, 85, 80, 92, 88, 95];
 
@@ -109,6 +110,7 @@ export default function MarketIntelligence() {
 
   return (
     <section className="bg-navy-dark section-padding relative overflow-hidden">
+      <SectionParticles id="particles-market" />
       {/* Grid background */}
       <div
         className="absolute inset-0 opacity-[0.04]"
