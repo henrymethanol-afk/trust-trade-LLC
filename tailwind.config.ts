@@ -34,6 +34,8 @@ const config: Config = {
         'fade-in': 'fadeIn 0.6s ease-out',
         'slide-up': 'slideUp 0.6s ease-out',
         'float': 'float 6s ease-in-out infinite',
+        'ken-burns': 'kenBurns 8s ease-out forwards',
+        'ken-burns-alt': 'kenBurnsAlt 8s ease-out forwards',
       },
       keyframes: {
         fadeIn: {
@@ -47,6 +49,14 @@ const config: Config = {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-10px)' },
+        },
+        kenBurns: {
+          '0%': { transform: 'scale(1) translate(0px, 0px)' },
+          '100%': { transform: 'scale(1.15) translate(-18px, -8px)' },
+        },
+        kenBurnsAlt: {
+          '0%': { transform: 'scale(1.05) translate(0px, 0px)' },
+          '100%': { transform: 'scale(1.2) translate(15px, -12px)' },
         },
       },
     },

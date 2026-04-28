@@ -1,63 +1,33 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useTranslations, useLocale } from 'next-intl';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ChevronDown } from 'lucide-react';
-import Particles, { initParticlesEngine } from '@tsparticles/react';
-import { loadSlim } from '@tsparticles/slim';
-import type { ISourceOptions } from '@tsparticles/engine';
 
-const particleOptions: ISourceOptions = {
-  background: { color: { value: 'transparent' } },
-  fpsLimit: 60,
-  interactivity: {
-    events: {
-      onHover: { enable: true, mode: 'repulse' },
-    },
-    modes: {
-      repulse: { distance: 80, duration: 0.4 },
-    },
-  },
-  particles: {
-    color: { value: '#C9A84C' },
-    links: {
-      color: '#C9A84C',
-      distance: 150,
-      enable: true,
-      opacity: 0.15,
-      width: 1,
-    },
-    move: {
-      direction: 'none',
-      enable: true,
-      outModes: { default: 'bounce' },
-      random: true,
-      speed: 0.8,
-      straight: false,
-    },
-    number: {
-      density: { enable: true },
-      value: 80,
-    },
-    opacity: { value: 0.3 },
-    shape: { type: 'circle' },
-    size: { value: { min: 1, max: 3 } },
-  },
-  detectRetina: true,
-};
+// Add your own images to /public/images/ and list them here.
+// Use professional industrial/port/chemical imagery (1920×1080 or wider).
+const slides = [
+  { src: '/images/hero-bg-1.jpeg', kenBurns: 'ken-burns' },
+  { src: '/images/hero-bg-2.jpeg', kenBurns: 'ken-burns-alt' },
+  { src: '/images/hero-bg-3.jpeg', kenBurns: 'ken-burns' },
+];
+
+const SLIDE_DURATION = 6000; // ms each slide stays visible
+const CROSSFADE_DURATION = 1.4; // seconds
 
 export default function HeroSection() {
   const t = useTranslations('hero');
   const locale = useLocale();
-  const [particlesReady, setParticlesReady] = useState(false);
+  const [current, setCurrent] = useState(0);
   const getHref = (path: string) => locale === 'es' ? path : `/${locale}${path}`;
 
   useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => setParticlesReady(true));
+    const timer = setInterval(() => {
+      setCurrent(c => (c + 1) % slides.length);
+    }, SLIDE_DURATION);
+    return () => clearInterval(timer);
   }, []);
 
   const scrollToNext = () => {
@@ -66,25 +36,50 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-screen bg-navy flex items-center justify-center overflow-hidden">
-      {/* Particle background */}
-      {particlesReady && (
-        <Particles
-          id="tsparticles"
-          className="absolute inset-0 z-0"
-          options={particleOptions}
-        />
-      )}
 
-      {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-hero-gradient z-[1] opacity-70" />
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-navy to-transparent z-[2]" />
+      {/* ── Background slideshow ── */}
+      <div className="absolute inset-0 z-0">
+        <AnimatePresence mode="sync">
+          <motion.div
+            key={current}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: CROSSFADE_DURATION, ease: 'easeInOut' }}
+            className={`absolute inset-0 bg-center bg-cover animate-${slides[current].kenBurns}`}
+            style={{ backgroundImage: `url('${slides[current].src}')` }}
+          />
+        </AnimatePresence>
+      </div>
+
+      {/* Slide dots */}
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-10 flex gap-2">
+        {slides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`transition-all duration-500 rounded-full ${
+              i === current
+                ? 'w-6 h-1.5 bg-gold'
+                : 'w-1.5 h-1.5 bg-white/30 hover:bg-white/50'
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Dark overlay — keeps text readable over any photo */}
+      <div className="absolute inset-0 z-[1] bg-navy/65" />
+      {/* Extra gradient at top and bottom */}
+      <div className="absolute inset-0 z-[1] bg-hero-gradient opacity-40" />
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-navy to-transparent z-[2]" />
 
       {/* Ambient glow blobs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gold/5 rounded-full blur-3xl z-[1]" />
       <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl z-[1]" />
 
-      {/* Content */}
+      {/* ── Content ── */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -92,7 +87,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-8"
         >
-          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-gold/30 bg-gold/10 text-gold text-sm font-medium">
+          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-gold/30 bg-gold/10 text-gold text-sm font-medium backdrop-blur-sm">
             <span className="w-1.5 h-1.5 bg-gold rounded-full animate-pulse" />
             Methanol Trading · FOB & CIF · Global
           </span>
@@ -123,7 +118,7 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-white/65 text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed"
+          className="text-white/70 text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed"
         >
           {t('subtitle')}
         </motion.p>
@@ -144,13 +139,13 @@ export default function HeroSection() {
           </Link>
           <Link
             href={getHref('/how-it-works')}
-            className="flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-inter font-semibold text-lg rounded-2xl hover:border-white/60 hover:bg-white/5 transition-all duration-300"
+            className="flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-inter font-semibold text-lg rounded-2xl hover:border-white/60 hover:bg-white/5 transition-all duration-300 backdrop-blur-sm"
           >
             {t('ctaHowItWorks')}
           </Link>
         </motion.div>
 
-        {/* Chemical formula floating badge */}
+        {/* Chemical formula badge */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

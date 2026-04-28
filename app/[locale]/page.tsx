@@ -5,6 +5,7 @@ import TrustBar from '@/components/home/TrustBar';
 import MarketIntelligence from '@/components/home/MarketIntelligence';
 import ValueProposition from '@/components/home/ValueProposition';
 import ProductPreview from '@/components/home/ProductPreview';
+import CommoditiesSection from '@/components/home/CommoditiesSection';
 import HowItWorksPreview from '@/components/home/HowItWorksPreview';
 import IndustriesSection from '@/components/home/IndustriesSection';
 import TeamSection from '@/components/home/TeamSection';
@@ -50,6 +51,7 @@ export default function HomePage() {
       <MarketIntelligence />
       <ValueProposition />
       <ProductPreview />
+      <CommoditiesSection />
       <HowItWorksPreview />
       <IndustriesSection />
       <TeamSection />
