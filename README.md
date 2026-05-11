@@ -96,7 +96,7 @@ npm start
 ## Team
 
 - Nicolas Herrera — Co-Founder
-- Henry Morales — Co-Founder
+- Henry Ramirez — Co-Founder
 - Yamil Llaver — Co-Founder
 
 ---

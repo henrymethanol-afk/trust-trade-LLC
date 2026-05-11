@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --font-inter: 'Inter', sans-serif;
-  --font-dmsans: 'DM Sans', sans-serif;
-  --navy: #0A1628;
-  --gold: #C9A84C;
-  --white: #FFFFFF;
-  --bg-light: #F4F6F9;
+  --font-inter: "Inter", sans-serif;
+  --font-dmsans: "DM Sans", sans-serif;
+  --navy: #0a1628;
+  --gold: #c9a84c;
+  --white: #ffffff;
+  --bg-light: #f4f6f9;
 }
 
 html {
@@ -23,7 +23,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-inter);
 }
 
@@ -32,10 +37,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0A1628;
+  background: #0a1628;
 }
 ::-webkit-scrollbar-thumb {
-  background: #C9A84C;
+  background: #c9a84c;
   border-radius: 3px;
 }
 
@@ -49,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Gold gradient text */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #C9A84C, #D4B86A, #C9A84C);
+  background: linear-gradient(135deg, #c9a84c, #d4b86a, #c9a84c);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -70,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Chat bubble scroll */
 .chat-scroll {
   scrollbar-width: thin;
-  scrollbar-color: #C9A84C transparent;
+  scrollbar-color: #c9a84c transparent;
 }
 
 @layer utilities {

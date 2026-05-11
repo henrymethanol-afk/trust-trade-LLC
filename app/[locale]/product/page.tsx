@@ -105,15 +105,17 @@ export default function ProductPage() {
             </div>
           </ScrollAnimation>
 
-          {/* Download placeholder */}
+          {/* Download spec sheet */}
           <ScrollAnimation delay={0.3}>
             <div className="mt-8 flex justify-center">
               <a
-                href="/icons/Hoja-de-Datos-Tecnicos.pdf"
+                href="/icons/Methanol-DataSheet.pdf"
                 download="TrustTrade-Methanol-DataSheet.pdf"
-                className="flex items-center gap-2 px-6 py-3 border-2 border-navy text-navy rounded-xl font-semibold hover:bg-navy hover:text-white transition-all duration-300 group"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 px-7 py-3.5 bg-navy text-white rounded-xl font-semibold hover:bg-navy-light transition-all duration-300 group shadow-md hover:shadow-lg hover:-translate-y-0.5"
               >
-                <Download className="w-5 h-5 group-hover:text-gold transition-colors" />
+                <Download className="w-5 h-5 text-gold group-hover:scale-110 transition-transform" />
                 {t('downloadSpec')}
               </a>
             </div>

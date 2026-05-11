@@ -7,7 +7,7 @@ import ScrollAnimation from '@/components/ui/ScrollAnimation';
 
 const members = [
   { name: 'Nicolas Herrera', role: 'CRO', photo: '/images/NicolasHerrera.jpg', linkedinHref: 'https://www.linkedin.com/in/nicolasjherrera/' },
-  { name: 'Henry Morales', role: 'CEO & Founder', photo: '/images/HenryMorales.jpg', linkedinHref: 'https://www.linkedin.com/in/henry-morales--/' },
+  { name: 'Henry Ramirez', role: 'CEO & Founder', photo: '/images/HenryRamirez.jpg', linkedinHref: 'https://www.linkedin.com/in/henry-morales--/' },
   { name: 'Yamil Llaver', role: 'Head of Sales', photo: '/images/YamilLlaver.jpg', linkedinHref: 'https://www.linkedin.com/in/yamil-llaver/' },
 ];
 
