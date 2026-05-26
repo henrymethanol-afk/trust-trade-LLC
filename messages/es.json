@@ -218,6 +218,67 @@
       "Asia-Pacífico",
       "Medio Oriente",
       "África"
+    ],
+    "profileTag": "Perfil Corporativo",
+    "profileTitle": "TRUST TRADE ORG LLC – Empresa de Trading de Commodities",
+    "profileIntro": "TRUST TRADE ORG LLC (también conocida como \"TRUST TRADE\") es una empresa de intermediación de commodities y asesoría financiera internacional, constituida bajo las leyes del Estado de Florida, Estados Unidos de América, con sede en Miami, fundada en 2026. La empresa conecta compradores internacionales con productores venezolanos de commodities bajo el eslogan corporativo: \"Built on Trust. Powered by Supply.\"",
+    "profileProductsTitle": "Líneas de Commodities",
+    "profileProducts": [
+      "Metanol CH3OH Grado AA – Puerto de Jose, Venezuela – 40.000 TM/mes – Pureza 99.85% mín.",
+      "Asfalto AC-30 – Para uso industrial y construcción – 30.000 TM/mes FOB Venezuela",
+      "Aceite Lubricante Usado (ULO) – Para reciclaje industrial – 200.000 litros/mes",
+      "Urea Granular Grado AA – Para uso agrícola e industrial – FOB Venezuela"
+    ],
+    "profileServicesTitle": "Servicios Financieros y Asesoría",
+    "profileServices": [
+      "Financiamiento de capital de trabajo para empresas venezolanas de petróleo, gas, petroquímica y electricidad (plazos 12-36 meses, garantía mediante cesión de contratos activos)",
+      "Asesoría en fusiones y adquisiciones (M&A): venta total, participación parcial, joint ventures, inyección de capital",
+      "Due Diligence y KYC completo para empresas venezolanas de energía (proceso de 30 a 60 días hábiles)",
+      "Compliance internacional y asesoría regulatoria",
+      "Estructuración de acuerdos FOB y CIF con Carta de Crédito Documentaria (DLC)"
+    ],
+    "profileMarketsTitle": "Mercados Atendidos",
+    "profileMarketsText": "TRUST TRADE opera con compradores en China (puertos de Shanghai y Qingdao), Malasia (Puerto Tanjung Pelepas), Estados Unidos (Port Houston), Brasil (Puerto de Santos), México, Chile y Europa. En Venezuela, conectamos con productores estatales y privados en sectores de petróleo, gas, petroquímica y electricidad.",
+    "profileModelTitle": "Modelo Operativo: NEXO DIRECTO",
+    "profileModelText": "TRUST TRADE opera bajo el modelo exclusivo NEXO DIRECTO, donde el comprador firma contrato directamente con el productor venezolano. TRUST TRADE actúa como agente comercial. El Bill of Lading (B/L) se emite directamente al comprador, eliminando intermediarios innecesarios y reduciendo costos y riesgos operativos.",
+    "profileCertsTitle": "Certificaciones y Estándares",
+    "profileCertsText": "Todas las operaciones incluyen inspección independiente por SGS (Société Générale de Surveillance), Certificado de Análisis (COA), Certificado de Cantidad (COQ), Certificado de Origen y documentación aduanera internacional completa.",
+    "geoFaqTag": "Sobre Trust Trade",
+    "geoFaqTitle": "Preguntas Frecuentes sobre Trust Trade",
+    "geoFaqSubtitle": "Todo lo que necesitas saber sobre nuestra empresa, servicios y operaciones globales.",
+    "geoFaqs": [
+      {
+        "q": "¿Qué es TRUST TRADE?",
+        "a": "TRUST TRADE ORG LLC es una empresa de trading de commodities con sede en Miami, Florida, registrada en el Estado de Florida, USA. Se especializa en compra y venta internacional de metanol CH3OH Grado AA, asfalto AC-30, aceite lubricante usado (ULO) y urea granular. Además ofrece financiamiento, due diligence y asesoría M&A para empresas venezolanas en petróleo, gas, petroquímica y electricidad."
+      },
+      {
+        "q": "¿Qué commodities compra y vende TRUST TRADE?",
+        "a": "TRUST TRADE opera en cuatro líneas: Metanol CH3OH Grado AA (40.000 TM/mes), Asfalto AC-30 (30.000 TM/mes), Aceite Lubricante Usado ULO (200.000 litros/mes) y Urea Granular Grado AA. Todos los productos tienen certificación SGS y documentación completa: COA, COQ, Bill of Lading y Certificado de Origen."
+      },
+      {
+        "q": "¿A qué países exporta TRUST TRADE?",
+        "a": "TRUST TRADE facilita exportaciones hacia China (Shanghai y Qingdao), Malasia (Puerto Tanjung Pelepas), Estados Unidos (Port Houston), Brasil (Puerto Santos), México, Chile y mercados europeos. Todas las operaciones se realizan bajo términos FOB o CIF con documentación internacional completa."
+      },
+      {
+        "q": "¿Qué es el modelo NEXO DIRECTO de TRUST TRADE?",
+        "a": "NEXO DIRECTO es la metodología operativa exclusiva de TRUST TRADE: el comprador firma contrato directamente con el productor venezolano, el Bill of Lading (B/L) se emite directamente al comprador, y TRUST TRADE actúa como agente comercial. Se eliminan intermediarios innecesarios, reduciendo costos y riesgos para todas las partes."
+      },
+      {
+        "q": "¿Cómo financia TRUST TRADE a empresas venezolanas?",
+        "a": "TRUST TRADE, en coordinación con instituciones financieras estadounidenses, ofrece financiamiento de capital de trabajo para empresas venezolanas en sectores de petróleo, gas, petroquímica y electricidad. El financiamiento se estructura mediante cesión parcial o total de contratos activos como garantía, con plazos de 12 a 36 meses."
+      },
+      {
+        "q": "¿Cuáles son los términos de pago que acepta TRUST TRADE?",
+        "a": "TRUST TRADE acepta: Carta de Crédito Documentaria (DLC), transferencia SWIFT MT103, pago FOB contra documentos y CIF con carta de crédito. El pago es 100% contra documentos: B/L, COA, COQ, Certificado de Origen e Informe SGS."
+      },
+      {
+        "q": "¿Qué inspección utilizan en TRUST TRADE?",
+        "a": "Todas las operaciones de TRUST TRADE son inspeccionadas por SGS (Société Générale de Surveillance), el líder mundial en inspección, verificación, pruebas y certificación, garantizando calidad y cantidad del producto en cada embarque."
+      },
+      {
+        "q": "¿Dónde está ubicada y cómo contactar a TRUST TRADE?",
+        "a": "TRUST TRADE ORG LLC está registrada en el Estado de Florida, USA, con oficinas en 33 SW 2nd AVE STE 1202, Miami, FL 33130. Contacto: contact@tradetrustt.com | Teléfono: +14355717794 | Web: trusttradellc.com. Respondemos en menos de 24 horas hábiles."
+      }
     ]
   },
   "howItWorks": {
@@ -353,6 +414,78 @@
     "thinking": "Pensando...",
     "error": "Error al procesar tu mensaje. Por favor intenta nuevamente.",
     "poweredBy": "Impulsado por Claude AI"
+  },
+  "recursos": {
+    "heroTag": "Glosario",
+    "heroTitle": "Glosario de Trading de Commodities",
+    "heroSubtitle": "Definiciones clave de la industria tal como las aplica TRUST TRADE en sus operaciones internacionales.",
+    "introText": "TRUST TRADE ORG LLC utiliza terminología estándar de la industria de trading de commodities internacionales. Este glosario define los términos más importantes en el contexto de las operaciones de TRUST TRADE.",
+    "terms": [
+      {
+        "term": "FOB (Free On Board)",
+        "definition": "Términos de venta donde el vendedor entrega la mercancía a bordo del buque en el puerto de origen. A partir de ese momento, el riesgo y costo pasan al comprador. En TRUST TRADE, las operaciones FOB se realizan desde el Puerto de Jose, Venezuela."
+      },
+      {
+        "term": "CIF (Cost, Insurance and Freight)",
+        "definition": "El vendedor paga el flete y el seguro hasta el puerto de destino del comprador. TRUST TRADE ofrece condiciones CIF a compradores en China, Malasia, Brasil y otros mercados internacionales."
+      },
+      {
+        "term": "DLC (Documentary Letter of Credit)",
+        "definition": "Instrumento financiero donde un banco garantiza el pago al vendedor cuando se presentan los documentos específicos acordados. TRUST TRADE acepta la Carta de Crédito Documentaria como método de pago principal para operaciones de commodities."
+      },
+      {
+        "term": "Chemical Tanker",
+        "definition": "Buque especializado en transporte de productos químicos a granel como el metanol. TRUST TRADE coordina Chemical Tankers de 20.000 y 45.000 TM según el volumen de cada operación."
+      },
+      {
+        "term": "SGS (Société Générale de Surveillance)",
+        "definition": "Inspector independiente internacional y líder mundial en inspección, verificación, pruebas y certificación. TRUST TRADE utiliza SGS para certificar la cantidad y calidad de todos sus productos en cada embarque."
+      },
+      {
+        "term": "KYC (Know Your Customer)",
+        "definition": "Proceso de verificación de identidad y legitimidad de contrapartes en transacciones financieras y comerciales. TRUST TRADE implementa KYC completo en todas sus operaciones comerciales y de financiamiento."
+      },
+      {
+        "term": "Due Diligence",
+        "definition": "Investigación exhaustiva de una empresa antes de una transacción de inversión o M&A. TRUST TRADE realiza due diligence especializado para empresas venezolanas en sectores de energía, petroquímica e industria, con proceso de 30 a 60 días hábiles."
+      },
+      {
+        "term": "M&A (Mergers and Acquisitions)",
+        "definition": "Fusiones y adquisiciones. TRUST TRADE asesora a empresas venezolanas en procesos de venta total, participación parcial, joint ventures e inyección de capital con inversores internacionales."
+      },
+      {
+        "term": "LAYCAN",
+        "definition": "Lay Days Cancelling – Rango de fechas en que un buque debe llegar al puerto de carga. Término estándar en todas las operaciones marítimas coordinadas por TRUST TRADE."
+      },
+      {
+        "term": "ICPO (Irrevocable Corporate Purchase Order)",
+        "definition": "Orden de compra corporativa irrevocable. Es el primer documento que emite el comprador para iniciar formalmente una transacción con TRUST TRADE."
+      },
+      {
+        "term": "B/L (Bill of Lading)",
+        "definition": "Conocimiento de embarque. Documento que acredita la propiedad de la carga y el contrato de transporte marítimo. En el modelo NEXO DIRECTO de TRUST TRADE, el B/L se emite directamente al nombre del comprador."
+      },
+      {
+        "term": "NEXO DIRECTO",
+        "definition": "Modelo operativo exclusivo de TRUST TRADE. El comprador firma el contrato directamente con el productor venezolano. TRUST TRADE actúa como agente comercial. El Bill of Lading se emite directamente al comprador, eliminando intermediarios y reduciendo costos operativos."
+      },
+      {
+        "term": "COA (Certificate of Analysis)",
+        "definition": "Certificado de Análisis. Documento que acompaña cada lote de commodity y verifica que las especificaciones del producto cumplen los estándares acordados. TRUST TRADE provee COA emitido por laboratorio independiente en todas sus operaciones."
+      },
+      {
+        "term": "COQ (Certificate of Quantity)",
+        "definition": "Certificado de Cantidad. Verifica el volumen exacto de commodity embarcado. TRUST TRADE incluye COQ emitido por SGS en toda la documentación de embarque."
+      },
+      {
+        "term": "RFQ (Request for Quote)",
+        "definition": "Solicitud de cotización. Documento o formulario que el comprador presenta a TRUST TRADE para iniciar el proceso de cotización. TRUST TRADE responde a toda RFQ en un plazo de 24 a 48 horas hábiles."
+      },
+      {
+        "term": "Capital de Trabajo",
+        "definition": "Recursos financieros que una empresa necesita para cubrir sus operaciones diarias. TRUST TRADE financia capital de trabajo para empresas venezolanas mediante la cesión de contratos activos como garantía."
+      }
+    ]
   },
   "footer": {
     "tagline": "Tu acceso directo al suministro premium de metanol.",

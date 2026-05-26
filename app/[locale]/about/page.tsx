@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import {
-  pageUrl, hreflangAlternates, breadcrumbSchema, organizationSchema, jsonLd, SITE_URL, SITE_NAME,
+  pageUrl, hreflangAlternates, breadcrumbSchema, organizationSchema, corporationSchema, jsonLd, SITE_URL, SITE_NAME,
 } from '@/lib/seo';
 import AboutContent from './AboutContent';
 
@@ -56,6 +56,7 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
 
   const crumbName: Record<string, string> = { es: 'Nosotros', en: 'About', pt: 'Sobre' };
   const schemas = [
+    corporationSchema(),
     organizationSchema(),
     breadcrumbSchema([{ name: crumbName[locale] ?? 'About', item: pageUrl(locale, '/about') }]),
   ];

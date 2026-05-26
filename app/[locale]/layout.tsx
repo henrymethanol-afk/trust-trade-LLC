@@ -7,7 +7,7 @@ import { Toaster } from 'sonner';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ChatBot from '@/components/ChatBot';
-import { organizationSchema, jsonLd, SITE_URL, SITE_NAME, TWITTER_HANDLE } from '@/lib/seo';
+import { organizationSchema, corporationSchema, jsonLd, SITE_URL, SITE_NAME, TWITTER_HANDLE } from '@/lib/seo';
 import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
@@ -70,6 +70,10 @@ export default async function LocaleLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: jsonLd(organizationSchema()) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLd(corporationSchema()) }}
         />
       </head>
       <body className={`${inter.variable} ${dmSans.variable} font-dmsans antialiased`}>

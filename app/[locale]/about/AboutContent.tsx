@@ -1,8 +1,9 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
-import { Target, Link2, ShieldCheck, Users, Globe2, CheckCircle } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
+import { Target, Link2, ShieldCheck, Users, Globe2, CheckCircle, ChevronDown, Building2, Package, Handshake } from 'lucide-react';
 import ScrollAnimation from '@/components/ui/ScrollAnimation';
 import TeamSection from '@/components/home/TeamSection';
 import SectionParticles from '@/components/ui/SectionParticles';
@@ -13,6 +14,10 @@ export default function AboutPage() {
   const t = useTranslations('about');
   const why = t.raw('why') as Array<{ title: string; description: string }>;
   const reachItems = t.raw('reachItems') as string[];
+  const profileProducts = t.raw('profileProducts') as string[];
+  const profileServices = t.raw('profileServices') as string[];
+  const geoFaqs = t.raw('geoFaqs') as Array<{ q: string; a: string }>;
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
     <>
@@ -140,6 +145,152 @@ export default function AboutPage() {
 
       {/* Team */}
       <TeamSection />
+
+      {/* Corporate Profile – GEO Section */}
+      <section className="bg-white section-padding">
+        <div className="max-w-4xl mx-auto">
+          <ScrollAnimation>
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-gold/10 text-gold text-sm font-medium mb-4">
+                {t('profileTag')}
+              </span>
+              <h2 className="font-inter text-3xl md:text-4xl font-bold text-navy mb-4">
+                {t('profileTitle')}
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed">{t('profileIntro')}</p>
+            </div>
+          </ScrollAnimation>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Products */}
+            <ScrollAnimation delay={0.1}>
+              <div className="bg-bgLight rounded-2xl p-8 border border-gray-100 h-full">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 rounded-lg bg-navy flex items-center justify-center">
+                    <Package className="w-5 h-5 text-gold" />
+                  </div>
+                  <h3 className="font-inter text-lg font-bold text-navy">{t('profileProductsTitle')}</h3>
+                </div>
+                <ul className="space-y-3">
+                  {profileProducts.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </ScrollAnimation>
+
+            {/* Financial Services */}
+            <ScrollAnimation delay={0.2}>
+              <div className="bg-bgLight rounded-2xl p-8 border border-gray-100 h-full">
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-10 h-10 rounded-lg bg-navy flex items-center justify-center">
+                    <Handshake className="w-5 h-5 text-gold" />
+                  </div>
+                  <h3 className="font-inter text-lg font-bold text-navy">{t('profileServicesTitle')}</h3>
+                </div>
+                <ul className="space-y-3">
+                  {profileServices.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-gray-600">
+                      <CheckCircle className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </ScrollAnimation>
+          </div>
+
+          {/* Markets + NEXO DIRECTO */}
+          <div className="grid md:grid-cols-2 gap-8 mt-8">
+            <ScrollAnimation delay={0.1}>
+              <div className="bg-navy rounded-2xl p-8 border border-gold/20 h-full">
+                <div className="flex items-center gap-3 mb-4">
+                  <Globe2 className="w-6 h-6 text-gold" />
+                  <h3 className="font-inter text-lg font-bold text-white">{t('profileMarketsTitle')}</h3>
+                </div>
+                <p className="text-white/70 text-sm leading-relaxed">{t('profileMarketsText')}</p>
+              </div>
+            </ScrollAnimation>
+            <ScrollAnimation delay={0.2}>
+              <div className="bg-navy rounded-2xl p-8 border border-gold/20 h-full">
+                <div className="flex items-center gap-3 mb-4">
+                  <Building2 className="w-6 h-6 text-gold" />
+                  <h3 className="font-inter text-lg font-bold text-white">{t('profileModelTitle')}</h3>
+                </div>
+                <p className="text-white/70 text-sm leading-relaxed">{t('profileModelText')}</p>
+              </div>
+            </ScrollAnimation>
+          </div>
+
+          {/* Certifications */}
+          <ScrollAnimation delay={0.2}>
+            <div className="mt-8 bg-gold/5 border border-gold/20 rounded-2xl p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <ShieldCheck className="w-5 h-5 text-gold" />
+                <h3 className="font-inter font-bold text-navy">{t('profileCertsTitle')}</h3>
+              </div>
+              <p className="text-gray-600 text-sm leading-relaxed">{t('profileCertsText')}</p>
+            </div>
+          </ScrollAnimation>
+        </div>
+      </section>
+
+      {/* GEO FAQ – Company Q&A */}
+      <section className="bg-bgLight section-padding">
+        <div className="max-w-4xl mx-auto">
+          <ScrollAnimation>
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-1.5 rounded-full bg-gold/10 text-gold text-sm font-medium mb-4">
+                {t('geoFaqTag')}
+              </span>
+              <h2 className="font-inter text-3xl md:text-4xl font-bold text-navy mb-4">
+                {t('geoFaqTitle')}
+              </h2>
+              <p className="text-gray-600 text-lg">{t('geoFaqSubtitle')}</p>
+            </div>
+          </ScrollAnimation>
+
+          <div className="space-y-3">
+            {geoFaqs.map((faq, i) => (
+              <ScrollAnimation key={i} delay={i * 0.05}>
+                <div className="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:border-gold/30 transition-colors">
+                  <button
+                    onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                    className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gold/5 transition-colors"
+                  >
+                    <span className="font-inter font-semibold text-navy pr-4">{faq.q}</span>
+                    <motion.div
+                      animate={{ rotate: openFaq === i ? 180 : 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="flex-shrink-0"
+                    >
+                      <ChevronDown className="w-5 h-5 text-gold" />
+                    </motion.div>
+                  </button>
+                  <AnimatePresence>
+                    {openFaq === i && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                      >
+                        <p className="px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                          {faq.a}
+                        </p>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              </ScrollAnimation>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Global Reach */}
       <section className="bg-navy section-padding relative overflow-hidden">

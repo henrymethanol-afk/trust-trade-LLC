@@ -129,6 +129,163 @@ export function faqSchema(faqs: Array<{ q: string; a: string }>) {
   };
 }
 
+export function corporationSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Corporation',
+    name: 'TRUST TRADE ORG LLC',
+    alternateName: ['TRUST TRADE', 'Trust Trade LLC'],
+    legalName: 'TRUST TRADE ORG LLC',
+    foundingDate: '2026',
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
+    image: `${SITE_URL}/og-image.png`,
+    email: SITE_EMAIL,
+    telephone: SITE_PHONE,
+    address: { '@type': 'PostalAddress', ...ADDRESS },
+    sameAs: SOCIAL_LINKS,
+    description:
+      'TRUST TRADE ORG LLC is a Miami-based international commodity trading company specializing in methanol CH3OH Grade AA, asphalt AC-30, used lubricating oil, and urea — with working capital financing, due diligence, and M&A advisory services for Venezuelan companies.',
+    slogan: 'Built on Trust. Powered by Supply.',
+    founder: {
+      '@type': 'Person',
+      name: 'Yamil Llaver',
+      jobTitle: 'Director & Authorized Signatory',
+      email: SITE_EMAIL,
+      url: 'https://www.linkedin.com/in/yamil-llaver/',
+    },
+    employee: [
+      {
+        '@type': 'Person',
+        name: 'Nicolas Herrera',
+        jobTitle: 'Commercial Lead (CRO)',
+        url: 'https://www.linkedin.com/in/nicolasjherrera/',
+      },
+      {
+        '@type': 'Person',
+        name: 'Henry Ramirez',
+        jobTitle: 'CEO & Founder',
+        url: 'https://www.linkedin.com/in/henry-morales--/',
+      },
+    ],
+    knowsAbout: [
+      'Commodity Trading',
+      'Methanol CH3OH Trading',
+      'Asphalt AC-30',
+      'Used Lubricating Oil ULO',
+      'Granular Urea',
+      'Venezuelan Company Financing',
+      'Working Capital Financing',
+      'Due Diligence',
+      'M&A Advisory',
+      'International Trade',
+      'FOB CIF Trading',
+      'Documentary Letter of Credit DLC',
+      'SGS Inspection',
+      'Petrochemical Trading',
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Commodity Products & Financial Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Product',
+            name: 'Methanol CH3OH Grade AA',
+            description:
+              'Premium methanol for industrial use. 40,000 MT/month FOB Puerto de Jose, Venezuela. ASTM Grade AA, purity 99.85% min. SGS-inspected.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Product',
+            name: 'Asphalt AC-30',
+            description: 'Industrial asphalt grade AC-30. 30,000 MT/month FOB Venezuela.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Product',
+            name: 'Used Lubricating Oil (ULO)',
+            description: 'Used lubricating oil for industrial recycling. 200,000 liters/month FOB Venezuela.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Product',
+            name: 'Granular Urea Grade AA',
+            description: 'Granular urea for agricultural and industrial use. FOB Venezuela.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Working Capital Financing for Venezuelan Companies',
+            description:
+              'Capital injection financing for Venezuelan companies in oil, gas, and petrochemical sectors. Contract assignment as collateral. Terms: 12-36 months.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Due Diligence & KYC Services',
+            description:
+              'Complete compliance evaluation for Venezuelan energy companies. KYC, asset analysis, contract review, financial assessment. Process: 30-60 business days.',
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'M&A Advisory for Venezuelan Companies',
+            description:
+              'Mergers and acquisitions advisory: full sale, partial stake, joint ventures, capital injection for Venezuelan energy companies.',
+          },
+        },
+      ],
+    },
+    areaServed: [
+      { '@type': 'Country', name: 'China' },
+      { '@type': 'Country', name: 'Malaysia' },
+      { '@type': 'Country', name: 'United States' },
+      { '@type': 'Country', name: 'Brazil' },
+      { '@type': 'Country', name: 'Mexico' },
+      { '@type': 'Country', name: 'Chile' },
+      { '@type': 'Country', name: 'Venezuela' },
+    ],
+  };
+}
+
+export function teamMemberSchema(member: {
+  name: string;
+  jobTitle: string;
+  description: string;
+  linkedinUrl: string;
+  imageUrl?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: member.name,
+    jobTitle: member.jobTitle,
+    description: member.description,
+    url: member.linkedinUrl,
+    image: member.imageUrl,
+    worksFor: {
+      '@type': 'Corporation',
+      name: 'TRUST TRADE ORG LLC',
+      url: SITE_URL,
+    },
+    email: SITE_EMAIL,
+  };
+}
+
 export function jsonLd(schema: object) {
   return JSON.stringify(schema);
 }

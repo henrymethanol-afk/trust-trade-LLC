@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 const locales = ['es', 'en', 'pt'];
-const routes = ['', '/product', '/solutions', '/about', '/how-it-works', '/contact'];
+const routes = ['', '/product', '/solutions', '/about', '/how-it-works', '/contact', '/recursos'];
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trusttradellc.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/solutions': 0.85,
     '/how-it-works': 0.8,
     '/about': 0.7,
+    '/recursos': 0.6,
   };
 
   const frequencies: Record<string, 'weekly' | 'monthly'> = {
@@ -23,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/solutions': 'monthly',
     '/how-it-works': 'monthly',
     '/about': 'monthly',
+    '/recursos': 'monthly',
   };
 
   for (const route of routes) {
