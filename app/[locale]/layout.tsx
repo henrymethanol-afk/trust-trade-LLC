@@ -39,13 +39,13 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     type: 'website',
     locale: 'es_ES',
-    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: SITE_NAME }],
+    images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: SITE_NAME }],
   },
   twitter: {
     card: 'summary_large_image',
     site: TWITTER_HANDLE,
     creator: TWITTER_HANDLE,
-    images: [`${SITE_URL}/og-image.jpg`],
+    images: [`${SITE_URL}/og-image.png`],
   },
 };
 

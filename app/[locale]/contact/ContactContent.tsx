@@ -64,7 +64,7 @@ export default function ContactPage() {
               {/* Email */}
               <ScrollAnimation delay={0.3}>
                 <a
-                  href="mailto:contact@trusttradellc.com"
+                  href="mailto:contact@tradetrustt.com"
                   className="flex items-center gap-4 bg-white rounded-xl p-5 border border-gray-100 hover:border-gold/30 hover:shadow-md transition-all group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-navy flex items-center justify-center group-hover:bg-gold/10 transition-colors flex-shrink-0">
@@ -72,7 +72,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-inter font-semibold text-navy text-sm">{t('email')}</p>
-                    <p className="text-gray-600 text-sm">contact@trusttradellc.com</p>
+                    <p className="text-gray-600 text-sm">contact@tradetrustt.com</p>
                   </div>
                 </a>
               </ScrollAnimation>

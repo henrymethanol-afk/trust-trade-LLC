@@ -40,13 +40,13 @@ export async function generateMetadata({
       url,
       type: 'website',
       siteName: SITE_NAME,
-      images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: 'How to buy methanol – Trust Trade LLC' }],
+      images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: 'How to buy methanol – Trust Trade LLC' }],
     },
     twitter: {
       card: 'summary_large_image',
       title: titles[locale] ?? titles.en,
       description: descriptions[locale] ?? descriptions.en,
-      images: [`${SITE_URL}/og-image.jpg`],
+      images: [`${SITE_URL}/og-image.png`],
     },
   };
 }

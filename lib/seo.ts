@@ -1,6 +1,6 @@
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://trusttradellc.com';
 export const SITE_NAME = 'Trust Trade LLC';
-export const SITE_EMAIL = 'contact@trusttradellc.com';
+export const SITE_EMAIL = 'contact@tradetrustt.com';
 export const SITE_PHONE = '+14355717794';
 export const TWITTER_HANDLE = '@trusttradellc';
 

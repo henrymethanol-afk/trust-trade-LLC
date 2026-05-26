@@ -101,7 +101,7 @@ export async function POST(req: NextRequest) {
               ` : ''}
             </div>
             <div class="footer">
-              <p>Trust Trade LLC • Florida, USA • contact@trusttradellc.com</p>
+              <p>Trust Trade LLC • Florida, USA • contact@tradetrustt.com</p>
             </div>
           </div>
         </body>
@@ -144,7 +144,7 @@ export async function POST(req: NextRequest) {
               </div>
               <div style="background: #0A1628; padding: 20px; text-align: center;">
                 <p style="color: rgba(255,255,255,0.5); font-size: 12px; margin: 0;">
-                  Trust Trade LLC • Florida, USA • contact@trusttradellc.com
+                  Trust Trade LLC • Florida, USA • contact@tradetrustt.com
                 </p>
               </div>
             </div>

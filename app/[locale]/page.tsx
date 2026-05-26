@@ -55,13 +55,13 @@ export async function generateMetadata({
       url,
       type: 'website',
       siteName: SITE_NAME,
-      images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: `${SITE_NAME} – Methanol Trading` }],
+      images: [{ url: `${SITE_URL}/og-image.png`, width: 1200, height: 630, alt: `${SITE_NAME} – Methanol Trading` }],
     },
     twitter: {
       card: 'summary_large_image',
       title: titles[locale] ?? titles.en,
       description: descriptions[locale] ?? descriptions.en,
-      images: [`${SITE_URL}/og-image.jpg`],
+      images: [`${SITE_URL}/og-image.png`],
     },
   };
 }
