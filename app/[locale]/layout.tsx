@@ -7,19 +7,11 @@ import { Toaster } from 'sonner';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ChatBot from '@/components/ChatBot';
+import { organizationSchema, jsonLd, SITE_URL, SITE_NAME, TWITTER_HANDLE } from '@/lib/seo';
 import '../globals.css';
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-});
-
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  variable: '--font-dmsans',
-  display: 'swap',
-});
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
+const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-dmsans', display: 'swap' });
 
 const locales = ['es', 'en', 'pt'];
 
@@ -27,40 +19,34 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tradetrustt.com';
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
+  applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
+  },
   icons: {
     icon: '/favicon.png',
     shortcut: '/favicon.png',
     apple: '/favicon.png',
   },
   openGraph: {
-    siteName: 'Trust Trade LLC',
+    siteName: SITE_NAME,
     type: 'website',
-    locale: 'en_US',
+    locale: 'es_ES',
+    images: [{ url: `${SITE_URL}/og-image.jpg`, width: 1200, height: 630, alt: SITE_NAME }],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@trusttradellc',
+    site: TWITTER_HANDLE,
+    creator: TWITTER_HANDLE,
+    images: [`${SITE_URL}/og-image.jpg`],
   },
-};
-
-const organizationJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Trust Trade LLC',
-  url: siteUrl,
-  logo: `${siteUrl}/favicon.png`,
-  email: 'contact@trusttradellc.com',
-  address: {
-    '@type': 'PostalAddress',
-    addressRegion: 'Florida',
-    addressCountry: 'US',
-  },
-  description: 'Direct methanol supplier. ASTM Grade AA, purity ≥99.85%. FOB & CIF worldwide delivery. Florida LLC.',
-  knowsAbout: ['Methanol Trading', 'Chemical Commodities', 'FOB CIF Logistics', 'ASTM Grade AA Methanol'],
 };
 
 export default async function LocaleLayout({
@@ -78,9 +64,12 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className="scroll-smooth">
       <head>
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="copyright" content={`2026 ${SITE_NAME}`} />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: jsonLd(organizationSchema()) }}
         />
       </head>
       <body className={`${inter.variable} ${dmSans.variable} font-dmsans antialiased`}>
@@ -92,11 +81,7 @@ export default async function LocaleLayout({
           <Toaster
             position="bottom-right"
             toastOptions={{
-              style: {
-                background: '#0A1628',
-                color: '#FFFFFF',
-                border: '1px solid #C9A84C',
-              },
+              style: { background: '#0A1628', color: '#FFFFFF', border: '1px solid #C9A84C' },
             }}
           />
         </NextIntlClientProvider>
