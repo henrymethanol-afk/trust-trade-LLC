@@ -17,7 +17,7 @@ const formSchema = z.object({
     'Methanol (CH₃OH)',
     'Diesel / ULSD',
     'Fuel Oil',
-    'Marine Fuel',
+    'Granular Urea',
     'Jet Fuel / Jet A-1',
     'Asphalt / Bitumen',
     'Lubricants',
@@ -140,7 +140,7 @@ export default function RFQForm({ dark = false }: { dark?: boolean }) {
             <option value="Methanol (CH₃OH)">Methanol (CH₃OH) — Core Product</option>
             <option value="Diesel / ULSD">Diesel / ULSD</option>
             <option value="Fuel Oil">Fuel Oil</option>
-            <option value="Marine Fuel">Marine Fuel</option>
+            <option value="Granular Urea">Granular Urea</option>
             <option value="Jet Fuel / Jet A-1">Jet Fuel / Jet A-1</option>
             <option value="Asphalt / Bitumen">Asphalt / Bitumen</option>
             <option value="Lubricants">Lubricants</option>

@@ -31,10 +31,10 @@ const commodities = [
     accent: 'from-stone-900/80',
   },
   {
-    name: 'Marine Fuel',
-    tag: 'Bunker & VLSFO',
-    image: '/images/commodities/marine-fuel.jpeg',  // search: "cargo ship port bunker"
-    accent: 'from-blue-950/80',
+    name: 'Granular Urea',
+    tag: 'Agricultural & Industrial',
+    image: '/images/commodities/urea.png',
+    accent: 'from-emerald-900/80',
   },
   {
     name: 'Jet Fuel / Jet A-1',

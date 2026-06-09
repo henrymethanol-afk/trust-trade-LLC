@@ -16,7 +16,7 @@ Key facts:
 - No fixed minimum order quantity — we adapt to each client's needs
 - For quotes, always invite the user to fill the RFQ form at /contact
 - Product specifications: Density 0.791 g/cm³ at 20°C, Boiling Point 64.7°C, Water Content 0.1% max, Flash Point 11°C
-- Applications: formaldehyde production, fuel blending, biodiesel, petrochemicals, industrial solvents, marine fuel
+- Applications: formaldehyde production, fuel blending, biodiesel, petrochemicals, industrial solvents, granular urea
 - Documentation provided: Certificate of Analysis (CoA), Bill of Lading, Packing List, Commercial Invoice, Certificate of Origin
 
 Language instructions:
